@@ -11,14 +11,18 @@ namespace Class_Project___Deliverable_2
         static void Main(string[] args)
         {
 
-
+            //Asks first question for user to enter a grade 
             Console.WriteLine("What grade do you expect to get in ISM4300?");
+            
+            //Try-Catch to catch any errors a user may enter 
             try
             {
+                //Declared variables 
                 string input = null;
-                input = Console.ReadLine();
-                int inputvalue = int.Parse(input);
+                input = Console.ReadLine(); //Reads input from the user
+                int inputvalue = int.Parse(input); //Parses the string to int 
                 {
+                    //Set of if statements of grades from 0-100
                     if (inputvalue >= 0 && inputvalue < 60)
                     {
                         Console.WriteLine("Your grade in ISM4300 will be an F");
@@ -75,9 +79,11 @@ namespace Class_Project___Deliverable_2
                 }
             }
 
+
+            //Catch statement to catch errors
             catch
             {
-                Console.WriteLine("Please enter a interger value between 0-100");
+                Console.WriteLine("Please enter a interger value between 0-100"); //catch statement 
             }
 
         
