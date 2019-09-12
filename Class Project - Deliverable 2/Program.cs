@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Class_Project___Deliverable_2
 {
-    class Program
+
+class Program
     {
         static void Main(string[] args)
         {
+            Start: //Start of loop
 
             //Asks first question for user to enter a grade 
             Console.WriteLine("What grade do you expect to get in ISM4300?");
@@ -21,6 +23,8 @@ namespace Class_Project___Deliverable_2
                 string input = null;
                 input = Console.ReadLine(); //Reads input from the user
                 int inputvalue = int.Parse(input); //Parses the string to int 
+
+                
                 {
                     //Set of if statements of grades from 0-100
                     if (inputvalue >= 0 && inputvalue < 60)
@@ -75,7 +79,7 @@ namespace Class_Project___Deliverable_2
                     {
                         Console.WriteLine("Your grade in ISM4300 will be an A+");
                     }
-
+                    
                 }
             }
 
@@ -85,9 +89,9 @@ namespace Class_Project___Deliverable_2
             {
                 Console.WriteLine("Please enter a interger value between 0-100"); //catch statement 
             }
+            goto Start; //Back to start
 
-        
-            
+
         }
     }
 }
